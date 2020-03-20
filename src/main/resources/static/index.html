@@ -68,19 +68,15 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-            <li class="ml-auto nav-item authenticated dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="profile-name" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false"></a>
-                <div class="dropdown-menu" aria-labelledby="profile-name">
-                    <a class="dropdown-item" href="#" onclick="logout()">Sign Out</a>
-                </div>
-            </li>
             <li class="ml-auto nav-item unauthenticated">
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal">Sign In</a>
             </li>
             
             <li class="ml-auto nav-item authenticated">
                 <a class="nav-link" href="/checkout">Checkout</a>
+            </li>
+            <li class="ml-auto nav-item authenticated dropdown">
+                    <a class="nav-link" href="#" onclick="logout()">Sign Out</a>
             </li>
             
         </ul>
