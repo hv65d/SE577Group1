@@ -9,23 +9,15 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .authorizeRequests(a -> a
-                    .antMatchers("/", "/error", "/webjars/**", "/css/**", "/js/**").permitAll()                    
-                    .anyRequest().authenticated()
-                    
-            )
-            .exceptionHandling(e -> e
-                    .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-            )
-            .logout(l -> l
-                    .logoutSuccessUrl("/").permitAll()
-            )
-            .csrf(c -> c
-                    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-            )
-            .oauth2Login();
-    }
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests(a -> a.antMatchers("/", "/error", "/webjars/**", "/css/**", "/js/**").permitAll()
+				.anyRequest().authenticated())
+				.exceptionHandling(e -> e.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
+				.logout(l -> l.logoutSuccessUrl("/").permitAll())
+				.csrf(c -> c.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())).oauth2Login();
+
+		http.csrf().disable();
+	}
+
 }
