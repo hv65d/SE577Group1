@@ -12,7 +12,7 @@ import com.paypal.api.payments.Payment;
 import com.paypal.base.rest.PayPalRESTException;
 
 import edu.drexel.TrainDemo.models.PayPalOrderData;
-import edu.drexel.TrainDemo.services.PayPalService;
+import edu.drexel.TrainDemo.service.PayPalService;
 
 @Controller
 public class PayPalController {
