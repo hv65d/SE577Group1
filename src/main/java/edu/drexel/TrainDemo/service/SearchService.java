@@ -50,8 +50,6 @@ public class SearchService {
 		List<StopTime> fromTime = stopTimeRepository.findByStopId(fromStop);
 		List<StopTime> toTime = stopTimeRepository.findByStopId(toStop);
 		List<StopTimeResultSet> results = new ArrayList<StopTimeResultSet>();
-//		System.out.println("FromTimeResults " + fromTime.size());
-//		System.out.println("toTimeResults " + toTime.size());
 		fromTime.forEach(fromTimeResults -> {
 			toTime.forEach(toTimeResult -> {
 
@@ -84,6 +82,5 @@ public class SearchService {
 		});
 
 	}
-	
 
 }
