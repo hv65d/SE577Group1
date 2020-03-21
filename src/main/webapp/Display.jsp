@@ -140,7 +140,6 @@
 				out.print("<td>");
 					String ticketType = str.getStopId() + ";" + str.getToId() + ";" + str.getTripId() + ";" + str.getArrival_time() + ";" + str.getDeparture_time() + ";" + str.getStopSequence();
 					out.print("<button class='btn btn-primary' type='submit' name='ticketType' value="+ticketType+">Book</button>");
-					//out.print("<input class='btn btn-primary' type='submit' value='Book'/>");
 				out.print("</td>");
 				
 				out.print("</tr>");
@@ -226,7 +225,6 @@
 					out.print("<td>");
 						String ticketType = str.getStopId() + ";" + str.getToId() + ";" + str.getTripId() + ";" + str.getArrival_time() + ";" + str.getDeparture_time() + ";" + str.getStopSequence();
 						out.print("<button class='btn btn-primary' type='submit' name='ticketType' value="+ticketType+">Book</button>");
-						//out.print("<button class='btn btn-primary' type='submit' name='routeDetails' value="+list+">Book</button>");
 					out.print("</td>");
 					
 					out.print("</tr>");

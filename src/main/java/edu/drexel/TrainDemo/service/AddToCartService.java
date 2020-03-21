@@ -1,4 +1,4 @@
-package edu.drexel.TrainDemo.services;
+package edu.drexel.TrainDemo.service;
 
 import java.util.StringTokenizer;
 
@@ -16,8 +16,6 @@ public class AddToCartService {
 
 	@Autowired
 	private UserNameResolverService userNameService;
-	
-	private int cartItemIndex;
 
 	public String retrieveOrderDetails() {
 
@@ -39,11 +37,9 @@ public class AddToCartService {
 		orders.setCustomer_name("aditya");
 		ordersRepository.save(orders);
 		System.out.println("Testing this add to cart service");
-		
-		cartItemIndex = cartItemIndex + 1;
 	}
 
 	public long generateOrderId() {
-		return cartItemIndex;
+		return 0;
 	}
 }
