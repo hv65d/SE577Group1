@@ -1,17 +1,47 @@
-
+  
 # SE577 Group 1
-### Search Progress
-Added.
+### Search 
 
-### Display Progress
-Added. 
+ - Added to homepage. 
+ - Login required. 
+ - Includes autocomplete of station names.
 
+### Display 
 
+ - Added after clicking search from homepage.
+ - Includes Book button to book a ticket.
 
-### Checkout Progress
+### Cart
+
+ - DB Management required for this work. Run the following query to the same PostGreSQL used for Amtrak Data.
+
+    ```
+    -- Table: public.orders
+
+	-- DROP TABLE public.orders;
+
+	CREATE TABLE public.orders
+	(
+	    order_id integer NOT NULL,
+	    customer_name text COLLATE pg_catalog."default" NOT NULL,
+	    fromstation text COLLATE pg_catalog."default" NOT NULL,
+	    tostation text COLLATE pg_catalog."default" NOT NULL,
+	    tripid text COLLATE pg_catalog."default" NOT NULL,
+	    departtime text COLLATE pg_catalog."default" NOT NULL,
+	    arrivaltime text COLLATE pg_catalog."default" NOT NULL,
+	    numoftickets integer NOT NULL,
+	    CONSTRAINT orders_pkey PRIMARY KEY (order_id)
+	)
+
+	TABLESPACE pg_default;
+
+	ALTER TABLE public.orders
+	    OWNER to postgres;
+    ```
+
+### Checkout 
 Files necessary to access PayPal to checkout has been added. A prototype for the webpage of the checkout can be accessed through the Checkout tab in the navigation bar (which can only be accessed when logged in). 
 
-------
 
 ## Getting Started
 

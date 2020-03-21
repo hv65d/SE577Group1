@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.drexel.TrainDemo.models.StopTimeResultSet;
-import edu.drexel.TrainDemo.services.SearchService;
+import edu.drexel.TrainDemo.service.SearchService;
 
 @Controller
 public class SearchDisplayController {
@@ -39,8 +39,6 @@ public class SearchDisplayController {
 			mvw.setViewName("Display.jsp");
 
 		} else {
-
-			System.out.println("I'm here guyz!");
 			List<StopTimeResultSet> resultSet = searchService.getStopsTimesBetweenTwo(searchService.translation(origin),
 					searchService.translation(destination), null);
 			List<StopTimeResultSet> twowayResultSet = searchService.getStopsTimesBetweenTwo(
