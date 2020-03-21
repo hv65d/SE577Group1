@@ -26,7 +26,11 @@ public class AddToCartService {
 
 		StringTokenizer str = new StringTokenizer(ticketDetails, ";");
 		Orders orders = new Orders();
-		// NYP;NOL;191296507;14:15:00;44:32:00;32;
+		if (classH.equals("B")) {
+
+		} else if (classH.equals("P")) {
+
+		}
 		orders.setFromstation((String) str.nextElement());
 		orders.setTostation((String) (str.nextElement()));
 		orders.setTripid((String) str.nextElement());
