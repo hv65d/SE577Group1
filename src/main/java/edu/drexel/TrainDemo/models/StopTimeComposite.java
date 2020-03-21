@@ -3,6 +3,7 @@ package edu.drexel.TrainDemo.models;
 import java.io.Serializable;
 
 public class StopTimeComposite implements Serializable {
+
 	private String stopId;
 	private Long tripId;
 
@@ -52,4 +53,5 @@ public class StopTimeComposite implements Serializable {
 			return false;
 		return true;
 	}
+
 }
