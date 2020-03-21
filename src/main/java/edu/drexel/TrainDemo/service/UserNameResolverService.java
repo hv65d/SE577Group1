@@ -1,4 +1,4 @@
-package edu.drexel.TrainDemo.services;
+package edu.drexel.TrainDemo.service;
 
 import org.springframework.stereotype.Service;
 
