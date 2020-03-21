@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.drexel.TrainDemo.service.ItineraryServicer;
+import edu.drexel.TrainDemo.services.ItineraryServicer;
 
 @Controller
 public class ViewItineraryController {

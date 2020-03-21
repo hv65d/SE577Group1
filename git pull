@@ -1,0 +1,823 @@
+[1mdiff --git a/UserNameResolverService.java b/UserNameResolverService.java[m
+[1mdeleted file mode 100644[m
+[1mindex ed591f6..0000000[m
+[1m--- a/UserNameResolverService.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,12 +0,0 @@[m
+[31m-package edu.drexel.TrainDemo.service;[m
+[31m-[m
+[31m-import org.springframework.stereotype.Service;[m
+[31m-[m
+[31m-@Service[m
+[31m-public class UserNameResolverService {[m
+[31m-[m
+[31m-	public static String getUserName() {[m
+[31m-		return null;[m
+[31m-	}[m
+[31m-[m
+[31m-}[m
+[1mdiff --git a/bin/pom.xml b/bin/pom.xml[m
+[1mindex 8e3bfbd..83a2fca 100644[m
+[1m--- a/bin/pom.xml[m
+[1m+++ b/bin/pom.xml[m
+[36m@@ -77,10 +77,6 @@[m
+ 		    <artifactId>tomcat-jasper</artifactId>[m
+ 		    <version>9.0.29</version>[m
+ 		</dependency>[m
+[31m-		<dependency>[m
+[31m-            <groupId>javax.servlet</groupId>[m
+[31m-            <artifactId>jstl</artifactId>[m
+[31m-            </dependency>[m
+ 		[m
+     </dependencies>[m
+ [m
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/controllers/BookTicketController.class b/bin/src/main/java/edu/drexel/TrainDemo/controllers/BookTicketController.class[m
+[1mdeleted file mode 100644[m
+[1mindex 43a8145..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/controllers/BookTicketController.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/controllers/CartController.class b/bin/src/main/java/edu/drexel/TrainDemo/controllers/CartController.class[m
+[1mdeleted file mode 100644[m
+[1mindex 3bc7f48..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/controllers/CartController.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/controllers/HtmlController.class b/bin/src/main/java/edu/drexel/TrainDemo/controllers/HtmlController.class[m
+[1mindex 586013c..8c8e8ec 100644[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/controllers/HtmlController.class and b/bin/src/main/java/edu/drexel/TrainDemo/controllers/HtmlController.class differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.class b/bin/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.class[m
+[1mindex 1391bbc..8820079 100644[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.class and b/bin/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.class differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.class b/bin/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.class[m
+[1mdeleted file mode 100644[m
+[1mindex 6a90cc3..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/models/Orders.class b/bin/src/main/java/edu/drexel/TrainDemo/models/Orders.class[m
+[1mdeleted file mode 100644[m
+[1mindex 9664447..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/models/Orders.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/repositories/OrdersRepository.class b/bin/src/main/java/edu/drexel/TrainDemo/repositories/OrdersRepository.class[m
+[1mdeleted file mode 100644[m
+[1mindex 7f72060..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/repositories/OrdersRepository.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/repositories/StopRepository.class b/bin/src/main/java/edu/drexel/TrainDemo/repositories/StopRepository.class[m
+[1mindex ee29772..309f812 100644[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/repositories/StopRepository.class and b/bin/src/main/java/edu/drexel/TrainDemo/repositories/StopRepository.class differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.class b/bin/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.class[m
+[1mdeleted file mode 100644[m
+[1mindex 72b8750..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.class b/bin/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.class[m
+[1mdeleted file mode 100644[m
+[1mindex 828321d..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/service/SearchService.class b/bin/src/main/java/edu/drexel/TrainDemo/service/SearchService.class[m
+[1mindex d8f7eac..f2efbef 100644[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/service/SearchService.class and b/bin/src/main/java/edu/drexel/TrainDemo/service/SearchService.class differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.class b/bin/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.class[m
+[1mdeleted file mode 100644[m
+[1mindex bc7688c..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/services/AddToCartService.class b/bin/src/main/java/edu/drexel/TrainDemo/services/AddToCartService.class[m
+[1mdeleted file mode 100644[m
+[1mindex f775d79..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/services/AddToCartService.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/services/ItineraryServicer.class b/bin/src/main/java/edu/drexel/TrainDemo/services/ItineraryServicer.class[m
+[1mdeleted file mode 100644[m
+[1mindex 1a060c0..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/services/ItineraryServicer.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/services/PayPalService.class b/bin/src/main/java/edu/drexel/TrainDemo/services/PayPalService.class[m
+[1mdeleted file mode 100644[m
+[1mindex 0553471..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/services/PayPalService.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/services/SearchService.class b/bin/src/main/java/edu/drexel/TrainDemo/services/SearchService.class[m
+[1mdeleted file mode 100644[m
+[1mindex a03265b..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/services/SearchService.class and /dev/null differ
+[1mdiff --git a/bin/src/main/java/edu/drexel/TrainDemo/services/UserNameResolverService.class b/bin/src/main/java/edu/drexel/TrainDemo/services/UserNameResolverService.class[m
+[1mdeleted file mode 100644[m
+[1mindex aeeb162..0000000[m
+Binary files a/bin/src/main/java/edu/drexel/TrainDemo/services/UserNameResolverService.class and /dev/null differ
+[1mdiff --git a/bin/src/main/resources/application.properties b/bin/src/main/resources/application.properties[m
+[1mindex c4a6422..bcb88e9 100644[m
+[1m--- a/bin/src/main/resources/application.properties[m
+[1m+++ b/bin/src/main/resources/application.properties[m
+[36m@@ -4,7 +4,7 @@[m [mspring.jpa.hibernate.ddl-auto=none[m
+ # Database connection settings[m
+ spring.datasource.url=jdbc:postgresql://localhost:5432/TrainDemo[m
+ spring.datasource.username=postgres[m
+[31m-spring.datasource.password=password[m
+[32m+[m[32mspring.datasource.password=teapot[m
+ [m
+ # Enable the settings below to log the SQL generated by Hibernate[m
+ spring.jpa.show-sql=false[m
+[1mdiff --git a/bin/src/main/resources/static/checkout.html b/bin/src/main/resources/static/checkout.html[m
+[1mindex 9d164f3..11435d3 100644[m
+[1m--- a/bin/src/main/resources/static/checkout.html[m
+[1m+++ b/bin/src/main/resources/static/checkout.html[m
+[36m@@ -3,10 +3,6 @@[m
+ <head>[m
+     <meta name="viewport" content="width=device-width, initial-scale=1">[m
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">[m
+[31m-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"/>[m
+[31m-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">[m
+[31m-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css"/>[m
+[31m-    <link rel="stylesheet" href="css/style.css"/> [m
+     <style>[m
+ body {[m
+   font-family: Arial;[m
+[36m@@ -24,7 +20,6 @@[m [mbody {[m
+   -ms-flex-wrap: wrap; /* IE10 */[m
+   flex-wrap: wrap;[m
+   margin: 0 -16px;[m
+[31m-  margin-top:100px;[m
+ }[m
+ [m
+ .col-25 {[m
+[36m@@ -116,34 +111,6 @@[m [mspan.price {[m
+     </style>[m
+ </head>[m
+ <body>[m
+[31m-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">[m
+[31m-    <a class="navbar-brand" href="#">Train Ticket</a>[m
+[31m-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"[m
+[31m-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">[m
+[31m-        <span class="navbar-toggler-icon"></span>[m
+[31m-    </button>[m
+[31m-[m
+[31m-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">[m
+[31m-        <ul class="navbar-nav mr-auto">[m
+[31m-            <li class="nav-item active">[m
+[31m-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>[m
+[31m-            </li>[m
+[31m-        </ul>[m
+[31m-        <ul class="navbar-nav ml-auto">[m
+[31m-            <li class="ml-auto nav-item unauthenticated">[m
+[31m-                <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal">Sign In</a>[m
+[31m-            </li>[m
+[31m-            [m
+[31m-            <li class="ml-auto nav-item authenticated">[m
+[31m-                <a class="nav-link" href="/checkout">Checkout</a>[m
+[31m-            </li>[m
+[31m-            <li class="ml-auto nav-item authenticated">[m
+[31m-                    <a class="nav-link" href="#" onclick="logout()">Sign Out</a>[m
+[31m-            </li>[m
+[31m-            [m
+[31m-        </ul>[m
+[31m-    </div>[m
+[31m-</nav>[m
+ <div class="row">[m
+     <div class="col-75">[m
+         <div class="container">[m
+[1mdiff --git a/bin/src/main/webapp/Confirmation.jsp b/bin/src/main/webapp/Confirmation.jsp[m
+[1mdeleted file mode 100644[m
+[1mindex 8ac68f0..0000000[m
+[1m--- a/bin/src/main/webapp/Confirmation.jsp[m
+[1m+++ /dev/null[m
+[36m@@ -1,16 +0,0 @@[m
+[31m-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"[m
+[31m-    pageEncoding="ISO-8859-1"%>[m
+[31m-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">[m
+[31m-[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-[m
+[31m-<h1>Confirmation page!!!</h1>[m
+[31m-[m
+[31m-<a href="/Itinerary">Itinerary</a>[m
+[31m-[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/bin/src/main/webapp/Display.jsp b/bin/src/main/webapp/Display.jsp[m
+[1mindex e6ada71..81ca7ff 100644[m
+[1m--- a/bin/src/main/webapp/Display.jsp[m
+[1m+++ b/bin/src/main/webapp/Display.jsp[m
+[36m@@ -43,7 +43,7 @@[m
+     <div class="collapse navbar-collapse" id="navbarsExampleDefault">[m
+         <ul class="navbar-nav mr-auto">[m
+             <li class="nav-item active">[m
+[31m-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>[m
+[32m+[m[32m                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>[m
+             </li>[m
+         </ul>[m
+         [m
+[36m@@ -59,6 +59,7 @@[m
+ 	<tr>[m
+ 	[m
+ 		<% [m
+[32m+[m[41m			[m
+ 			List<StopTimeResultSet> list = (List<StopTimeResultSet>)request.getAttribute("resultSet");[m
+ 			if(list==null){[m
+ 				out.print("<h5 align='center'>No Available routes</h5>");[m
+[36m@@ -138,9 +139,7 @@[m
+ 				out.print("</td>");[m
+ 				[m
+ 				out.print("<td>");[m
+[31m-					String ticketType = str.getStopId() + ";" + str.getToId() + ";" + str.getTripId() + ";" + str.getArrival_time() + ";" + str.getDeparture_time() + ";" + str.getStopSequence();[m
+[31m-					out.print("<button class='btn btn-primary' type='submit' name='ticketType' value="+ticketType+">Book</button>");[m
+[31m-					//out.print("<input class='btn btn-primary' type='submit' value='Book'/>");[m
+[32m+[m					[32mout.print("<input class='btn btn-primary' type='submit' value='Book'/>");[m
+ 				out.print("</td>");[m
+ 				[m
+ 				out.print("</tr>");[m
+[36m@@ -224,9 +223,7 @@[m
+ 					out.print("</td>");[m
+ 					[m
+ 					out.print("<td>");[m
+[31m-						String ticketType = str.getStopId() + ";" + str.getToId() + ";" + str.getTripId() + ";" + str.getArrival_time() + ";" + str.getDeparture_time() + ";" + str.getStopSequence();[m
+[31m-						out.print("<button class='btn btn-primary' type='submit' name='ticketType' value="+ticketType+">Book</button>");[m
+[31m-						//out.print("<button class='btn btn-primary' type='submit' name='routeDetails' value="+list+">Book</button>");[m
+[32m+[m						[32mout.print("<input class='btn btn-primary' type='submit' value='Book'/>");[m
+ 					out.print("</td>");[m
+ 					[m
+ 					out.print("</tr>");[m
+[1mdiff --git a/bin/src/main/webapp/ErrorHandler.jsp b/bin/src/main/webapp/ErrorHandler.jsp[m
+[1mdeleted file mode 100644[m
+[1mindex 82ce477..0000000[m
+[1m--- a/bin/src/main/webapp/ErrorHandler.jsp[m
+[1m+++ /dev/null[m
+[36m@@ -1,14 +0,0 @@[m
+[31m-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"[m
+[31m-    pageEncoding="ISO-8859-1"%>[m
+[31m-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">[m
+[31m-<title>Error</title>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-[m
+[31m-<h3>Something went wrong, try again!</h3>[m
+[31m-[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/bin/src/main/webapp/Homepage.jsp b/bin/src/main/webapp/Homepage.jsp[m
+[1mdeleted file mode 100644[m
+[1mindex fe8f949..0000000[m
+[1m--- a/bin/src/main/webapp/Homepage.jsp[m
+[1m+++ /dev/null[m
+[36m@@ -1,199 +0,0 @@[m
+[31m-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"[m
+[31m-    pageEncoding="ISO-8859-1"%>[m
+[31m-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>[m
+[31m-<!doctype html>[m
+[31m-<html lang="en">[m
+[31m-<head>[m
+[31m-    <meta charset="utf-8"/>[m
+[31m-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>[m
+[31m-    <title>Train Ticket</title>[m
+[31m-    <meta name="description" content=""/>[m
+[31m-    <meta name="viewport" content="width=device-width"/>[m
+[31m-    <base href="/"/>[m
+[31m-[m
+[31m-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"/>[m
+[31m-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">[m
+[31m-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css"/>[m
+[31m-    <link rel="stylesheet" href="css/style.css"/>[m
+[31m-    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />[m
+[31m-	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>    [m
+[31m-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>[m
+[31m-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>[m
+[31m-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>	[m
+[31m-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>[m
+[31m-	<script type="text/javascript">[m
+[31m-		$(document).ready(function() {[m
+[31m-	    $('.form-control').select2();[m
+[31m-		});[m
+[31m-		function toggler(val)[m
+[31m-		{			[m
+[31m-			if(val==1)[m
+[31m-			{[m
+[31m-				$("#return").hide();[m
+[31m-				$("#returnDate").hide();[m
+[31m-			}[m
+[31m-			else[m
+[31m-			{[m
+[31m-				$("#return").show();[m
+[31m-				$("#returnDate").show();[m
+[31m-			}[m
+[31m-		}[m
+[31m-		[m
+[31m-		[m
+[31m-	function dateAdjuster(){[m
+[31m-		var dtToday = new Date();[m
+[31m-    [m
+[31m-		var month = dtToday.getMonth() + 1;[m
+[31m-		var day = dtToday.getDate();[m
+[31m-		var year = dtToday.getFullYear();[m
+[31m-		if(month < 10)[m
+[31m-			month = '0' + month.toString();[m
+[31m-		if(day < 10)[m
+[31m-			day = '0' + day.toString();[m
+[31m-		[m
+[31m-		var maxDate = year + '-' + month + '-' + day;[m
+[31m-		//alert(maxDate);[m
+[31m-		$('#returnDate').attr('min', maxDate);[m
+[31m-		$('#departure').attr('min', maxDate);[m
+[31m-	}[m
+[31m-	[m
+[31m-		[m
+[31m-	</script>[m
+[31m-</head>[m
+[31m-<body onload="dateAdjuster()">[m
+[31m-[m
+[31m-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">[m
+[31m-    <a class="navbar-brand" href="#">Train Ticket</a>[m
+[31m-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"[m
+[31m-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">[m
+[31m-        <span class="navbar-toggler-icon"></span>[m
+[31m-    </button>[m
+[31m-[m
+[31m-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">[m
+[31m-        <ul class="navbar-nav mr-auto">[m
+[31m-            <li class="nav-item active">[m
+[31m-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>[m
+[31m-            </li>[m
+[31m-        </ul>[m
+[31m-        <ul class="navbar-nav ml-auto">[m
+[31m-            <li class="ml-auto nav-item unauthenticated">[m
+[31m-                <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal">Sign In</a>[m
+[31m-            </li>[m
+[31m-            [m
+[31m-            <li class="ml-auto nav-item authenticated">[m
+[31m-                <a class="nav-link" href="/checkout">Checkout</a>[m
+[31m-            </li>[m
+[31m-            <li class="ml-auto nav-item authenticated dropdown">[m
+[31m-                    <a class="nav-link" href="#" onclick="logout()">Sign Out</a>[m
+[31m-            </li>[m
+[31m-            [m
+[31m-        </ul>[m
+[31m-    </div>[m
+[31m-</nav>[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-<main role="main">[m
+[31m-	<div class="jumbotron">[m
+[31m-        <div class="container">[m
+[31m-		<form action="display">[m
+[31m-           <table align="center">[m
+[31m-			[m
+[31m-			<tr>[m
+[31m-				<td>[m
+[31m-					<div class="custom-control custom-radios">[m
+[31m-					<input type="radio" class="custom-control-input" id="defaultUnchecked" name="triptype" value="OneWay" onclick="toggler(1)">[m
+[31m-					<label class="custom-control-label" for="defaultUnchecked">One-Way</label>[m
+[31m-					</div>[m
+[31m-				</td>[m
+[31m-				<td>[m
+[31m-					<div class="custom-control custom-radios">[m
+[31m-					  <input type="radio" class="custom-control-input" id="defaultChecked" name="triptype" value="RoundTrip" checked onclick="toggler(0)">[m
+[31m-					  <label class="custom-control-label" for="defaultChecked">RoundTrip</label>[m
+[31m-					</div>[m
+[31m-				</td>[m
+[31m-			</tr>[m
+[31m-			[m
+[31m-			<tr>[m
+[31m-			<td>From</td>[m
+[31m-			<td>[m
+[31m-				<input type="text" class="form-control" id="origin" placeholder="Origin" name="origin" list="listOfStops">[m
+[31m-				<datalist id="listOfStops">[m
+[31m-  					<c:forEach items="${listStopNames}" var="StopName">[m
+[31m-					<option value="${StopName}">[m
+[31m-					</c:forEach>[m
+[31m-				</datalist>  [m
+[31m-			</td>[m
+[31m-			</tr>[m
+[31m-			[m
+[31m-			<tr>[m
+[31m-			<td>To</td>[m
+[31m-			<td>[m
+[31m-				<input type="text" class="form-control" id="destination" placeholder="Destination" name="destination" list="listOfStops">[m
+[31m-				<datalist id="listOfStops">[m
+[31m-  					<c:forEach items="${listStopNames}" var="StopName">[m
+[31m-					<option value="${StopName}">[m
+[31m-					</c:forEach>[m
+[31m-				</datalist>  [m
+[31m-			</td>[m
+[31m-			</tr>[m
+[31m-			<tr>[m
+[31m-				<td>[m
+[31m-					<label id="" for="departure">Departure Date</label>[m
+[31m-				</td>[m
+[31m-				<td>[m
+[31m-					<input type="date" class="form-control" id="departure" name="departure">[m
+[31m-				</td>[m
+[31m-			</tr>[m
+[31m-			[m
+[31m-			<tr>[m
+[31m-				<td>[m
+[31m-					<label id="return" for="departure">Return Date</label>[m
+[31m-				</td>[m
+[31m-				<td>[m
+[31m-					<input type="date" class="form-control" id="returnDate" name="returnDate">[m
+[31m-				</td>[m
+[31m-			</tr>[m
+[31m-			<tr>[m
+[31m-			<td>[m
+[31m-			<input class="btn btn-primary" type="submit" value="Search" onclick="printStops();">[m
+[31m-			</td>[m
+[31m-			</tr>[m
+[31m-		   </table>[m
+[31m-		   </form>[m
+[31m-        </div>[m
+[31m-    </div>[m
+[31m-[m
+[31m-    <div class="container">[m
+[31m-        [m
+[31m-    </div>[m
+[31m-[m
+[31m-    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="signInModal">[m
+[31m-        <div class="modal-dialog modal-dialog-centered" role="document">[m
+[31m-            <div class="modal-content">[m
+[31m-                <div class="modal-header">[m
+[31m-                    <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>[m
+[31m-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">[m
+[31m-                        <span aria-hidden="true">&times;</span>[m
+[31m-                    </button>[m
+[31m-                </div>[m
+[31m-                <div class="modal-body">[m
+[31m-                    <p>Get the most of our site by signing in with one of these supported services.</p>[m
+[31m-                    <a class="btn btn-block btn-social btn-github" href="/oauth2/authorization/github" role="button">[m
+[31m-                        <span class="fa fa-github"></span> Sign in with Github[m
+[31m-                    </a>[m
+[31m-                    <a class="btn btn-block btn-social btn-google" href="/oauth2/authorization/google" role="button">[m
+[31m-                        <span class="fa fa-google"></span> Sign in with Google[m
+[31m-                    </a>[m
+[31m-                </div>[m
+[31m-            </div>[m
+[31m-        </div>[m
+[31m-    </div>[m
+[31m-</main>[m
+[31m-[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>[m
+[31m-<script type="text/javascript" src="/js/script.js"></script>[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/bin/src/main/webapp/Itinerary.jsp b/bin/src/main/webapp/Itinerary.jsp[m
+[1mdeleted file mode 100644[m
+[1mindex 71804a3..0000000[m
+[1m--- a/bin/src/main/webapp/Itinerary.jsp[m
+[1m+++ /dev/null[m
+[36m@@ -1,109 +0,0 @@[m
+[31m-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"[m
+[31m-    pageEncoding="ISO-8859-1"%>[m
+[31m-    <%@ page import="java.util.List" %>[m
+[31m-    <%@ page import="edu.drexel.TrainDemo.models.Orders" %>[m
+[31m-    [m
+[31m-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-<div class="jumbotron">[m
+[31m-</div>[m
+[31m-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"/>[m
+[31m-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">[m
+[31m-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css"/>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>[m
+[31m-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">[m
+[31m-<title>Itinerary</title>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">[m
+[31m-  [m
+[31m-    <a class="navbar-brand" href="/">Train Ticket</a>[m
+[31m-[m
+[31m-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"[m
+[31m-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">[m
+[31m-        <span class="navbar-toggler-icon"></span>[m
+[31m-    </button>[m
+[31m-[m
+[31m-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">[m
+[31m-        <ul class="navbar-nav mr-auto">[m
+[31m-            <li class="nav-item active">[m
+[31m-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>[m
+[31m-            </li>[m
+[31m-        </ul>[m
+[31m-        [m
+[31m-    </div>[m
+[31m-</nav>[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-	<% [m
+[31m-	[m
+[31m-			List<Orders> itineraryEntries=(List<Orders>)request.getAttribute("itinerary");[m
+[31m-			if(itineraryEntries==null)[m
+[31m-			{[m
+[31m-				out.print("<h1>No Bookings found!</h1>");[m
+[31m-			}[m
+[31m-			else if(itineraryEntries.size()==0)[m
+[31m-			{[m
+[31m-				out.print("<h1>No Bookings found!</h1>");[m
+[31m-			}[m
+[31m-			else[m
+[31m-			{%>[m
+[31m-				[m
+[31m-				<table class="table">[m
+[31m-			<thead>[m
+[31m-	[m
+[31m-				<tr>[m
+[31m-					<td>OrderID</td>[m
+[31m-					<td>CustomerName</td>[m
+[31m-					<td>Origin Station</td>[m
+[31m-					<td>Destination Station</td>[m
+[31m-					<td>Depart Time</td>[m
+[31m-					<td>Arrival Time</td>[m
+[31m-					<td>Number of Tickets</td>[m
+[31m-				</tr>[m
+[31m-		[m
+[31m-			</thead>[m
+[31m-							[m
+[31m-			<%				[m
+[31m-				for(Orders order:itineraryEntries)[m
+[31m-				{[m
+[31m-					out.print("<tr>");[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getOrder_id());[m
+[31m-						out.print("</td>");[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getCustomer_name());[m
+[31m-						out.print("</td>");[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getFromstation());[m
+[31m-						out.print("</td>");[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getTostation());[m
+[31m-						out.print("</td>");				[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getDeparttime());[m
+[31m-						out.print("</td>");[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getArrivaltime());[m
+[31m-						out.print("</td>");[m
+[31m-						out.print("<td>");[m
+[31m-							out.print(order.getNumoftickets());[m
+[31m-						out.print("</td>");[m
+[31m-						[m
+[31m-					out.print("</tr>");[m
+[31m-				}[m
+[31m-			}[m
+[31m-			[m
+[31m-			%>[m
+[31m-	[m
+[31m-[m
+[31m-[m
+[31m-</table>[m
+[31m-[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/bin/src/main/webapp/PickClass.jsp b/bin/src/main/webapp/PickClass.jsp[m
+[1mdeleted file mode 100644[m
+[1mindex 2e96680..0000000[m
+[1m--- a/bin/src/main/webapp/PickClass.jsp[m
+[1m+++ /dev/null[m
+[36m@@ -1,134 +0,0 @@[m
+[31m-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"[m
+[31m-    pageEncoding="ISO-8859-1"%>[m
+[31m-    <%@ page import="java.util.ArrayList" %>[m
+[31m-    <%@ page import="java.util.StringTokenizer" %>[m
+[31m-    [m
+[31m-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-[m
+[31m-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"/>[m
+[31m-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">[m
+[31m-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css"/>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>[m
+[31m-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>[m
+[31m-[m
+[31m-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">[m
+[31m-[m
+[31m-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-</nav>[m
+[31m-[m
+[31m-<script type="text/javascript">[m
+[31m-[m
+[31m-	function validate()[m
+[31m-	{[m
+[31m-		var retValue=false;[m
+[31m-		var fieldLength = document.getElementsByName("classType").length;[m
+[31m-		for(var k=0;k<fieldLength;k++)[m
+[31m-		{[m
+[31m-				if(document.getElementsByName("classType")[k].checked==true)[m
+[31m-				{[m
+[31m-					retValue=true;	[m
+[31m-					document.getElementsByName("classH")[0].value=document.getElementsByName("classType")[k].value;[m
+[31m-				}				[m
+[31m-		}		[m
+[31m-		[m
+[31m-		if(retValue==false) alert("Please select the coach type");[m
+[31m-		[m
+[31m-		return retValue;[m
+[31m-	}[m
+[31m-[m
+[31m-</script>[m
+[31m-[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-[m
+[31m-	<%[m
+[31m-	[m
+[31m-		String parse=(String)request.getAttribute("ticketType");		[m
+[31m-		StringTokenizer fields = new StringTokenizer(parse,";");[m
+[31m-	[m
+[31m-	[m
+[31m-	%>[m
+[31m-	<hr>[m
+[31m-	<h2>Ticket Summary</h2>[m
+[31m-	<table class="table" align="center">[m
+[31m-	[m
+[31m-	<thead>[m
+[31m-	[m
+[31m-	<tr>[m
+[31m-	[m
+[31m-	<% [m
+[31m-		ArrayList<String> headers=new ArrayList<String>();[m
+[31m-		int index=0;[m
+[31m-		String lastVal="0";[m
+[31m-		headers.add(0,"FromStation");[m
+[31m-		headers.add(1,"ToStation");[m
+[31m-		headers.add(2,"TripID");[m
+[31m-		headers.add(3,"Departure Time");[m
+[31m-		headers.add(4,"Arrival Time");[m
+[31m-		headers.add(5,"Stop Sequence");		[m
+[31m-		while(fields.hasMoreElements())[m
+[31m-		{[m
+[31m-			out.print("<tr>");[m
+[31m-			out.print("<td>");[m
+[31m-			out.print(headers.get(index));[m
+[31m-			out.print("</td>");[m
+[31m-			out.print("<td>");[m
+[31m-			lastVal=(String)fields.nextElement();[m
+[31m-			out.print(lastVal);			[m
+[31m-			out.print("</td>");[m
+[31m-			out.print("</tr>");[m
+[31m-			index++;			[m
+[31m-		}		[m
+[31m-		out.print("<tr><td>");[m
+[31m-		out.print("Price");[m
+[31m-		out.print("</td>");[m
+[31m-		out.print("<td>");[m
+[31m-		out.print(Integer.parseInt(lastVal)*20);[m
+[31m-		out.print("$</td></tr>");[m
+[31m-	%>[m
+[31m-	[m
+[31m-	</tr>[m
+[31m-	[m
+[31m-	</thead>[m
+[31m-	[m
+[31m-	</table>[m
+[31m-[m
+[31m-	<table class="table-dark" align="center">[m
+[31m-	[m
+[31m-	<tr>[m
+[31m-	<td>[m
+[31m-		<input type="radio" id="eclass" name="classType" value="economy"/>[m
+[31m-		<label for="economy">Economy</label>[m
+[31m-	</td>	[m
+[31m-	</tr>[m
+[31m-	<tr>[m
+[31m-	<td>[m
+[31m-		<input type="radio" id="bclass" name="classType" value="business"/>[m
+[31m-		<label for="male">Business</label><br>[m
+[31m-	</td>[m
+[31m-	</tr>[m
+[31m-	<tr>[m
+[31m-	<td>[m
+[31m-		<input type="radio" id="pclass" name="classType" value="premium"/>[m
+[31m-		<label for="male">Premium Class</label><br>[m
+[31m-	</td>[m
+[31m-	</tr>[m
+[31m-		[m
+[31m-	</table>[m
+[31m-	<br>[m
+[31m-	<form action="cart" action="post">[m
+[31m-	<input type="hidden" name="ticketDetails" value="<%=parse %>" />[m
+[31m-	<input type="hidden" name="classH" value="" />[m
+[31m-	<div style="float:right; margin-right:100px">[m
+[31m-	<input class="btn btn-primary" type="submit" value="Add to Cart" onclick="return validate()">	[m
+[31m-	</div>[m
+[31m-	</form>[m
+[31m-[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/controllers/CartController.java b/src/main/java/edu/drexel/TrainDemo/controllers/CartController.java[m
+[1mindex 327fca7..d415e89 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/controllers/CartController.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/controllers/CartController.java[m
+[36m@@ -7,7 +7,7 @@[m [mimport org.springframework.stereotype.Controller;[m
+ import org.springframework.web.bind.annotation.RequestMapping;[m
+ import org.springframework.web.servlet.ModelAndView;[m
+ [m
+[31m-import edu.drexel.TrainDemo.service.AddToCartService;[m
+[32m+[m[32mimport edu.drexel.TrainDemo.services.AddToCartService;[m
+ [m
+ @Controller[m
+ public class CartController {[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/controllers/PayPalController.java b/src/main/java/edu/drexel/TrainDemo/controllers/PayPalController.java[m
+[1mindex 6c6b8bf..b447450 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/controllers/PayPalController.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/controllers/PayPalController.java[m
+[36m@@ -12,7 +12,7 @@[m [mimport com.paypal.api.payments.Payment;[m
+ import com.paypal.base.rest.PayPalRESTException;[m
+ [m
+ import edu.drexel.TrainDemo.models.PayPalOrderData;[m
+[31m-import edu.drexel.TrainDemo.service.PayPalService;[m
+[32m+[m[32mimport edu.drexel.TrainDemo.services.PayPalService;[m
+ [m
+ @Controller[m
+ public class PayPalController {[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.java b/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.java[m
+[1mindex e7e828e..b3ee0b3 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/controllers/SearchDisplayController.java[m
+[36m@@ -10,7 +10,7 @@[m [mimport org.springframework.web.bind.annotation.RequestMapping;[m
+ import org.springframework.web.servlet.ModelAndView;[m
+ [m
+ import edu.drexel.TrainDemo.models.StopTimeResultSet;[m
+[31m-import edu.drexel.TrainDemo.service.SearchService;[m
+[32m+[m[32mimport edu.drexel.TrainDemo.services.SearchService;[m
+ [m
+ @Controller[m
+ public class SearchDisplayController {[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.java b/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.java[m
+[1mindex 303e258..b10007b 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/controllers/ViewItineraryController.java[m
+[36m@@ -5,7 +5,7 @@[m [mimport org.springframework.stereotype.Controller;[m
+ import org.springframework.web.bind.annotation.RequestMapping;[m
+ import org.springframework.web.servlet.ModelAndView;[m
+ [m
+[31m-import edu.drexel.TrainDemo.service.ItineraryServicer;[m
+[32m+[m[32mimport edu.drexel.TrainDemo.services.ItineraryServicer;[m
+ [m
+ @Controller[m
+ public class ViewItineraryController {[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.java b/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.java[m
+[1mindex 2288690..3425443 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/service/AddToCartService.java[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-package edu.drexel.TrainDemo.service;[m
+[32m+[m[32mpackage edu.drexel.TrainDemo.services;[m
+ [m
+ import java.util.StringTokenizer;[m
+ [m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.java b/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.java[m
+[1mindex c0aff93..529b4a5 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/service/ItineraryServicer.java[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-package edu.drexel.TrainDemo.service;[m
+[32m+[m[32mpackage edu.drexel.TrainDemo.services;[m
+ [m
+ import java.util.ArrayList;[m
+ import java.util.List;[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/service/SearchService.java b/src/main/java/edu/drexel/TrainDemo/service/SearchService.java[m
+[1mindex e8f221e..24ef10b 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/service/SearchService.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/service/SearchService.java[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-package edu.drexel.TrainDemo.service;[m
+[32m+[m[32mpackage edu.drexel.TrainDemo.services;[m
+ [m
+ import java.util.ArrayList;[m
+ import java.util.List;[m
+[1mdiff --git a/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.java b/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.java[m
+[1mindex ed591f6..0d0afa1 100644[m
+[1m--- a/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.java[m
+[1m+++ b/src/main/java/edu/drexel/TrainDemo/service/UserNameResolverService.java[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-package edu.drexel.TrainDemo.service;[m
+[32m+[m[32mpackage edu.drexel.TrainDemo.services;[m
+ [m
+ import org.springframework.stereotype.Service;[m
+ [m
+[1mdiff --git a/src/test/java/edu/drexel/TrainDemo/TrainDemoApplicationTests.java b/src/test/java/edu/drexel/TrainDemo/TrainDemoApplicationTests.java[m
+[1mindex d44fadf..06ba511 100644[m
+[1m--- a/src/test/java/edu/drexel/TrainDemo/TrainDemoApplicationTests.java[m
+[1m+++ b/src/test/java/edu/drexel/TrainDemo/TrainDemoApplicationTests.java[m
+[36m@@ -4,7 +4,7 @@[m [mimport org.junit.jupiter.api.Test;[m
+ import org.springframework.beans.factory.annotation.Autowired;[m
+ import org.springframework.boot.test.context.SpringBootTest;[m
+ [m
+[31m-import edu.drexel.TrainDemo.service.SearchService;[m
+[32m+[m[32mimport edu.drexel.TrainDemo.services.SearchService;[m
+ [m
+ @SpringBootTest[m
+ class TrainDemoApplicationTests {[m

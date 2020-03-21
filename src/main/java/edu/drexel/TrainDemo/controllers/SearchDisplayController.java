@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.drexel.TrainDemo.models.StopTimeResultSet;
-import edu.drexel.TrainDemo.service.SearchService;
+import edu.drexel.TrainDemo.services.SearchService;
 
 @Controller
 public class SearchDisplayController {
