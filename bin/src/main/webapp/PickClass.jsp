@@ -16,10 +16,16 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+
+</nav>
+
 <script type="text/javascript">
 
 	function validate()
-	{	alert("Ticket has been placed into Cart!")
+	{
 		var retValue=false;
 		var fieldLength = document.getElementsByName("classType").length;
 		for(var k=0;k<fieldLength;k++)
@@ -36,58 +42,10 @@
 		return retValue;
 	}
 
-	function setPrice(val, initPrice)
-	{
-		initPrice=initPrice*20;		
-		if(val==0){
-			document.getElementById("price").innerHTML=initPrice+"$";
-			document.getElementsByName("classH")[0].value=""+E;
-		}
-		else if(val==1)
-		{
-			document.getElementById("price").innerHTML=initPrice+80+"$";
-			document.getElementsByName("classH")[0].value=""+B;
-		}
-		else{
-			document.getElementById("price").innerHTML=initPrice+150+"$";
-			document.getElementsByName("classH")[0].value=""+P;
-		}
-	}
-
 </script>
 
-</script>
-<style>
- .summary{
- 	margin-top:100px;
- }
-</style>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/">Train Ticket</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="ml-auto nav-item authenticated">
-                <a class="nav-link" href="/Itinerary">Cart</a>
-            </li>
-            <li class="ml-auto nav-item authenticated dropdown">
-                    <a class="nav-link" href="/" onclick="logout()">Sign Out</a>
-            </li>
-            
-        </ul>
-    </div>
-</nav>
 
 	<%
 	
@@ -96,8 +54,7 @@
 	
 	
 	%>
-<div class="summary">
-<hr>
+	<hr>
 	<h2>Ticket Summary</h2>
 	<table class="table" align="center">
 	
@@ -121,7 +78,7 @@
 			out.print("<td>");
 			out.print(headers.get(index));
 			out.print("</td>");
-			out.print("<td class='tableValues'>");
+			out.print("<td>");
 			lastVal=(String)fields.nextElement();
 			out.print(lastVal);			
 			out.print("</td>");
@@ -131,7 +88,7 @@
 		out.print("<tr><td>");
 		out.print("Price");
 		out.print("</td>");
-		out.print("<td id='price'>");
+		out.print("<td>");
 		out.print(Integer.parseInt(lastVal)*20);
 		out.print("$</td></tr>");
 	%>
@@ -146,19 +103,19 @@
 	
 	<tr>
 	<td>
-		<input type="radio" id="eclass" name="classType" value="economy" onclick="setPrice(0,<%out.print(lastVal);%>)"/>
+		<input type="radio" id="eclass" name="classType" value="economy"/>
 		<label for="economy">Economy</label>
 	</td>	
 	</tr>
 	<tr>
 	<td>
-		<input type="radio" id="bclass" name="classType" value="business" onclick="setPrice(1,<%out.print(lastVal);%>)"/>
+		<input type="radio" id="bclass" name="classType" value="business"/>
 		<label for="male">Business</label><br>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		<input type="radio" id="pclass" name="classType" value="premium" onclick="setPrice(2,<%out.print(lastVal);%>)"/>
+		<input type="radio" id="pclass" name="classType" value="premium"/>
 		<label for="male">Premium Class</label><br>
 	</td>
 	</tr>
@@ -169,10 +126,9 @@
 	<input type="hidden" name="ticketDetails" value="<%=parse %>" />
 	<input type="hidden" name="classH" value="" />
 	<div style="float:right; margin-right:100px">
-	<button class="btn btn-primary" type="submit" value="Add to Cart" onclick="return validate()">Add to Cart</button>	
+	<input class="btn btn-primary" type="submit" value="Add to Cart" onclick="return validate()">	
 	</div>
-	</form>	
-</div>
+	</form>
 
 </body>
 </html>

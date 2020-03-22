@@ -1,11 +1,14 @@
 package edu.drexel.TrainDemo.controllers;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.paypal.api.payments.Links;
 import com.paypal.api.payments.Payment;
@@ -23,9 +26,14 @@ public class PayPalController {
 	public static final String SUCCESS_URL = "pay/success";
 	public static final String CANCEL_URL = "pay/cancel";
 
-	@GetMapping("/checkout")
-	public String checkout() {
-		return "checkout.html";
+	@GetMapping("checkout")
+	public ModelAndView checkout(HttpServletRequest request) {
+		String itineraryEntries = request.getParameter("itineraryEntries");
+		
+		
+		ModelAndView mvw = new ModelAndView();
+		mvw.setViewName("Checkout.jsp");
+		return mvw;
 	}
 
 	@PostMapping("/pay")

@@ -18,7 +18,7 @@ public class HtmlController {
 	@Autowired
 	private StopRepository stopRepository;
 	
-	@RequestMapping("/")
+	@RequestMapping(value={"/", "/homepage"})
 	public ModelAndView homepage() {
 		
 		List<Stop> listOfStops = stopRepository.findAll();

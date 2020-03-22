@@ -19,7 +19,7 @@ public class ViewItineraryController {
 		System.out.print("HI");
 		ModelAndView mvw = new ModelAndView();
 		mvw.setViewName("Itinerary.jsp");
-		mvw.addObject("itinerary", itineraryServicer.returnItinerary("aditya"));
+		mvw.addObject("itinerary", itineraryServicer.returnItinerary("user"));
 		return mvw;
 	}
 }

@@ -2,6 +2,12 @@ package edu.drexel.TrainDemo.service;
 
 import java.util.StringTokenizer;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +22,9 @@ public class AddToCartService {
 
 	@Autowired
 	private UserNameResolverService userNameService;
+	
+	private long latestId = 0;
+	private long latestIdHolder;
 
 	public String retrieveOrderDetails() {
 
@@ -38,12 +47,19 @@ public class AddToCartService {
 		orders.setArrivaltime((String) str.nextElement());
 		orders.setNumoftickets(1);
 		orders.setOrder_id(generateOrderId());
-		orders.setCustomer_name("aditya");
+		orders.setCustomer_name("user");
 		ordersRepository.save(orders);
 		System.out.println("Testing this add to cart service");
+		
+		latestIdHolder = generateOrderId();
 	}
 
 	public long generateOrderId() {
-		return 0;
+		latestId = latestIdHolder + 1;
+		return latestId;
+	}
+	
+	public void deleteOrder(long orderId) {
+		ordersRepository.deleteById(orderId);
 	}
 }
