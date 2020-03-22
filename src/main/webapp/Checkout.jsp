@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -117,7 +118,7 @@ span.price {
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Train Ticket</a>
+    <a class="navbar-brand" href="/">Train Ticket</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -135,10 +136,10 @@ span.price {
             </li>
             
             <li class="ml-auto nav-item authenticated">
-                <a class="nav-link" href="/checkout">Checkout</a>
+                <a class="nav-link" href="/Itinerary">Cart</a>
             </li>
-            <li class="ml-auto nav-item authenticated">
-                    <a class="nav-link" href="#" onclick="logout()">Sign Out</a>
+            <li class="ml-auto nav-item authenticated dropdown">
+                    <a class="nav-link" href="/" onclick="logout()">Sign Out</a>
             </li>
             
         </ul>
@@ -173,10 +174,14 @@ span.price {
                 <input type="submit" value="Continue to checkout" class="btn">
             </form>
         </div>
-    </div>
+    </div>s
     <div class="col-25">
         <div class="container">
             <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <c:forEach items="${listStopNames}" var="StopName">
+					<option value="${StopName}">
+				<p>Product 1 <span class="price">$1</span></p>
+			</c:forEach>
             <p><a href="#">Product 1</a> <span class="price">$1</span></p>
             <p><a href="#">Product 2</a> <span class="price">$4</span></p>
             <p><a href="#">Product 3</a> <span class="price">$3</span></p>

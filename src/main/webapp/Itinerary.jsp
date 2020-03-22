@@ -19,7 +19,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Train Ticket</a>
+    <a class="navbar-brand" href="/">Train Ticket</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,13 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="ml-auto nav-item authenticated">
+                <a class="nav-link" href="/Itinerary">Cart</a>
+            </li>
+            <li class="ml-auto nav-item authenticated dropdown">
+                    <a class="nav-link" href="/" onclick="logout()">Sign Out</a>
             </li>
         </ul>
         
@@ -70,6 +76,7 @@
 			<%				
 				for(Orders order:itineraryEntries)
 				{
+					out.print("<form action='updateItinerary'>");
 					out.print("<tr>");
 						out.print("<td>");
 							out.print(order.getOrder_id());
@@ -93,15 +100,28 @@
 							out.print(order.getNumoftickets());
 						out.print("</td>");
 						
+						out.print("<td>");
+						long removeOrderId = order.getOrder_id();
+						out.print("<button class='btn btn-primary' type='submit' name='removeOrderId' value="+removeOrderId+">Remove From Cart</button>");
+						out.print("</td>");
+						
 					out.print("</tr>");
+					out.print("</form>");
+					
+					
+					String listOfTicketNames = order.getFromstation() + "-->" + order.getTostation() + ";";
+					//String listOfTicketPrices = order.getStopSequence()*20 + ";";
 				}
+			out.print("</table>");
+			out.print("<form action='checkout' action='post'>");
+			out.print("<div style='float:right; margin-right:100px'>");
+			out.print("<button class='btn btn-primary' type='submit' name='itineraryEntries' value="+itineraryEntries+">Proceed to Checkout</button>");
 			}
 			
 			%>
-	
 
 
-</table>
+
 
 </body>
 </html>

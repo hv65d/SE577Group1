@@ -16,16 +16,10 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-
-
-</nav>
-
 <script type="text/javascript">
 
 	function validate()
-	{
+	{	alert("Ticket has been placed into Cart!")
 		var retValue=false;
 		var fieldLength = document.getElementsByName("classType").length;
 		for(var k=0;k<fieldLength;k++)
@@ -61,9 +55,37 @@
 	}
 
 </script>
-
+<style>
+ .summary{
+ 	margin-top:100px;
+ }
+</style>
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">Train Ticket</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="ml-auto nav-item authenticated">
+                <a class="nav-link" href="/Itinerary">Cart</a>
+            </li>
+            <li class="ml-auto nav-item authenticated dropdown">
+                    <a class="nav-link" href="/" onclick="logout()">Sign Out</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
 
 	<%
 	
@@ -72,7 +94,8 @@
 	
 	
 	%>
-	<hr>
+<div class="summary">
+<hr>
 	<h2>Ticket Summary</h2>
 	<table class="table" align="center">
 	
@@ -144,9 +167,10 @@
 	<input type="hidden" name="ticketDetails" value="<%=parse %>" />
 	<input type="hidden" name="classH" value="" />
 	<div style="float:right; margin-right:100px">
-	<input class="btn btn-primary" type="submit" value="Add to Cart" onclick="return validate()">	
+	<button class="btn btn-primary" type="submit" value="Add to Cart" onclick="return validate()">Add to Cart</button>	
 	</div>
-	</form>
+	</form>	
+</div>
 
 </body>
 </html>

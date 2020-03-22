@@ -11,5 +11,4 @@ import edu.drexel.TrainDemo.models.Orders;
 public interface OrdersRepository extends CrudRepository<Orders, Long> {
 
 	List<Orders> findByOrderId(long order_id);
-
 }
