@@ -42,6 +42,24 @@
 		return retValue;
 	}
 
+	function setPrice(val, initPrice)
+	{
+		initPrice=initPrice*20;		
+		if(val==0){
+			document.getElementById("price").innerHTML=initPrice+"$";
+			document.getElementsByName("classH")[0].value=""+E;
+		}
+		else if(val==1)
+		{
+			document.getElementById("price").innerHTML=initPrice+80+"$";
+			document.getElementsByName("classH")[0].value=""+B;
+		}
+		else{
+			document.getElementById("price").innerHTML=initPrice+150+"$";
+			document.getElementsByName("classH")[0].value=""+P;
+		}
+	}
+
 </script>
 
 </head>
@@ -78,7 +96,7 @@
 			out.print("<td>");
 			out.print(headers.get(index));
 			out.print("</td>");
-			out.print("<td>");
+			out.print("<td class='tableValues'>");
 			lastVal=(String)fields.nextElement();
 			out.print(lastVal);			
 			out.print("</td>");
@@ -88,7 +106,7 @@
 		out.print("<tr><td>");
 		out.print("Price");
 		out.print("</td>");
-		out.print("<td>");
+		out.print("<td id='price'>");
 		out.print(Integer.parseInt(lastVal)*20);
 		out.print("$</td></tr>");
 	%>
@@ -103,19 +121,19 @@
 	
 	<tr>
 	<td>
-		<input type="radio" id="eclass" name="classType" value="economy"/>
+		<input type="radio" id="eclass" name="classType" value="economy" onclick="setPrice(0,<%out.print(lastVal);%>)"/>
 		<label for="economy">Economy</label>
 	</td>	
 	</tr>
 	<tr>
 	<td>
-		<input type="radio" id="bclass" name="classType" value="business"/>
+		<input type="radio" id="bclass" name="classType" value="business" onclick="setPrice(1,<%out.print(lastVal);%>)"/>
 		<label for="male">Business</label><br>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		<input type="radio" id="pclass" name="classType" value="premium"/>
+		<input type="radio" id="pclass" name="classType" value="premium" onclick="setPrice(2,<%out.print(lastVal);%>)"/>
 		<label for="male">Premium Class</label><br>
 	</td>
 	</tr>
