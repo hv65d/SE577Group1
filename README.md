@@ -5,6 +5,16 @@
  - Added to homepage. 
  - Login required. 
  - Includes autocomplete of station names.
+ 
+  Since Routes are hard to find just by choosing 2 random stops
+  here is an exmaple of two routes to input
+  
+  Testing:
+  Using the following will yield a result
+  From: New York Penn Station
+  To: Philadelphia 30th Street Station Amtrak
+  
+  
 
 ### Display 
 
