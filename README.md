@@ -10,7 +10,7 @@
   here is an exmaple of two routes to input
   
   Testing:
-  - Using the following will yield a result
+  Using the following will yield a result
   - From: New York Penn Station
   - To: Philadelphia 30th Street Station Amtrak
   
