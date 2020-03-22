@@ -1,3 +1,24 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Ad1tyaV 
+hv65d
+/
+SE577Group1
+2
+02
+ Code Issues 11 Pull requests 0 Actions Projects 0 Wiki Security Insights
+SE577Group1/src/main/webapp/Display.jsp
+@jdamascoty jdamascoty Fix book button
+1a4880e 5 hours ago
+@ItsMeMarty@jdamascoty
+245 lines (192 sloc)  7.25 KB
+  
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false" %>
     <%@ page import="java.util.List" %>
@@ -138,7 +159,8 @@
 				out.print("</td>");
 				
 				out.print("<td>");
-					out.print("<input class='btn btn-primary' type='submit' value='Book'/>");
+					String ticketType = str.getStopId() + ";" + str.getToId() + ";" + str.getTripId() + ";"+request.getParameter("departure")+" "+ str.getArrival_time() + ";"+request.getParameter("departure")+" "+ str.getDeparture_time() + ";" + str.getStopSequence();
+					out.print("<button class='btn btn-primary' type='submit' name='ticketType' value="+ticketType+">Book</button>");
 				out.print("</td>");
 				
 				out.print("</tr>");
@@ -147,9 +169,10 @@
 			out.print("</table>");
 			List<StopTimeResultSet> twowayResult = (List<StopTimeResultSet>)request.getAttribute("twowayResultSet");
 			if(twowayResult==null){
-				out.print("<h5 align='center'>No Available routes for Return Trip</h5>");
+				if(!(request.getParameter("triptype").equals("OneWay")))
+					out.print("<h5 align='center'>No Available routes for Return Trip</h5>");
 			}
-			else if(twowayResult.size()==0){
+			else if(twowayResult.size()==0 && !(request.getParameter("triptype").equals("OneWay"))){
 				out.print("<h5 align='center'>No Available routes for Return Trip</h5>");
 			}
 			else{
@@ -222,7 +245,8 @@
 					out.print("</td>");
 					
 					out.print("<td>");
-						out.print("<input class='btn btn-primary' type='submit' value='Book'/>");
+						String ticketType = str.getStopId() + ";" + str.getToId() + ";" + str.getTripId() + ";"+request.getParameter("returnTime")+" "+ str.getArrival_time() + ";"+request.getParameter("departure")+" "+ str.getDeparture_time() + ";" + str.getStopSequence();
+						out.print("<button class='btn btn-primary' type='submit' name='ticketType' value="+ticketType+">Book</button>");
 					out.print("</td>");
 					
 					out.print("</tr>");
