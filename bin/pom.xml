@@ -77,10 +77,6 @@
 		    <artifactId>tomcat-jasper</artifactId>
 		    <version>9.0.29</version>
 		</dependency>
-		<dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            </dependency>
 		
     </dependencies>
 
